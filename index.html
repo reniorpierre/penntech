@@ -1286,6 +1286,7 @@ L ── */
 
   <script>
     // ── SPLASH CAROUSEL ──
+    document.addEventListener("DOMContentLoaded", function() {
     (function() {
       const slides = document.querySelectorAll('.splash-slide');
       const dots   = document.querySelectorAll('.splash-dot');
@@ -1364,6 +1365,7 @@ L ── */
       nextBtn.textContent = 'Next →';
       resetTimer();
     })();
+    }); // DOMContentLoaded
   </script>
 
 </body>
