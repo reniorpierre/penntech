@@ -1286,7 +1286,7 @@ L ── */
 
   <script>
     // ── SPLASH CAROUSEL ──
-    document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("load", function() {
     (function() {
       const slides = document.querySelectorAll('.splash-slide');
       const dots   = document.querySelectorAll('.splash-dot');
@@ -1295,6 +1295,8 @@ L ── */
       const nextBtn  = document.getElementById('splashNext');
       const skipBtn  = document.getElementById('splashSkip');
       const splash   = document.getElementById('splash');
+
+      if (!prevBtn || !nextBtn || !skipBtn || !splash) { return; }
 
       let current = 0;
       const TOTAL = slides.length;
@@ -1365,7 +1367,7 @@ L ── */
       nextBtn.textContent = 'Next →';
       resetTimer();
     })();
-    }); // DOMContentLoaded
+    }); // load
   </script>
 
 </body>
